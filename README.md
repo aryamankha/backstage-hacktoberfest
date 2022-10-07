@@ -1,4 +1,13 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Backstage
+Building an NFT marketplace web app
+<h1>
+  <p align="center" ><b>
+   Hacktoberfest'2022
+    <br/>
+</h1>
+
+
+![image](https://user-images.githubusercontent.com/75615789/192692200-a4155b0d-bdc3-4a05-9747-ea7d2d6f665b.png)
 
 ## Getting Started
 
