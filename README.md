@@ -3,7 +3,7 @@ Building an NFT marketplace web app with Vivid as an in-browser styling tool!
 <h1>
   <p align="center" ><b>
    Hacktoberfest 2022!
-    <b/> </p>
+    </b> </p>
 </h1>
 
 
