@@ -33,5 +33,7 @@ Vivid is an in-browser styling we've developed (check out www.vivid.lol). It's s
     
 ## Designs
 Home Page: https://www.figma.com/file/I03uCw196ZjlzxHQelByBU/Landing-Page?node-id=2%3A2
+    
 Profile Page: https://www.figma.com/file/aTnodnfVNVkOus9dLZ5U96/Profile-Page?node-id=0%3A1
+    
 Browse Page: https://www.figma.com/file/8RpbZL9OlzJIYUR4k0rTlb/Browse-Page?node-id=0%3A1
