@@ -23,7 +23,7 @@ yarn
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. Go over the Vivid docs at docs.vivid.lol/functionality to get familiar with how in-browser styling works. 
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. Go over the Vivid docs at [docs.vivid.lol/functionality](docs.vivid.lol/functionality) to get familiar with how in-browser styling works. 
     
 ## Contributing
 This repository is beginner friendly! We'll first be creating the frontend for the web application, then we'll set up the database and finally we'll add crypto functionality if there's time. We'll be creating issues for contributors to own components in the frontend, but feel free to propose your own issues!
