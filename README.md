@@ -28,6 +28,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Contributing
 This repository is beginner friendly! We'll first be creating the frontend for the web application, then we'll set up the database and finally we'll add crypto functionality if there's time. We'll be creating issues for contributors to own components in the frontend, but feel free to propose your own issues!
     
+## Code organization
+We'll be using React, Next, and Typescript for our frontend with Tailwind for all styling. Any new sections created should be added to the "components" folder, with sections put together to create full pages. 
+    
 ## What is Vivid?
 Vivid is an in-browser styling we've developed (check out www.vivid.lol). It's still in alpha, but it allows you to style with Tailwind directly from your browser. Check out our (docs)[docs.vivid.lol/functionality] to learn how it works! If you find any bugs in Vivid, feel free to create issues in this repository so we can address them. Would love your feedback!
     
