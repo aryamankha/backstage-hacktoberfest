@@ -32,7 +32,7 @@ This repository is beginner friendly! We'll first be creating the frontend for t
 We'll be using React, Next, and Typescript for our frontend with Tailwind for all styling. Any new sections created should be added to the "components" folder, with sections put together to create full pages. 
     
 ## What is Vivid?
-Vivid is an in-browser styling we've developed (check out www.vivid.lol). It's still in alpha, but it allows you to style with Tailwind directly from your browser. Check out our (docs)[docs.vivid.lol/functionality] to learn how it works! If you find any bugs in Vivid, feel free to create issues in this repository so we can address them. Would love your feedback!
+Vivid is an in-browser styling we've developed (check out www.vivid.lol). It's still in alpha, but it allows you to style with Tailwind directly from your browser. Check out our [docs](docs.vivid.lol/functionality) to learn how it works! If you find any bugs in Vivid, feel free to create issues in this repository so we can address them. Would love your feedback!
     
 ## Designs
 Home Page: https://www.figma.com/file/I03uCw196ZjlzxHQelByBU/Landing-Page?node-id=2%3A2
