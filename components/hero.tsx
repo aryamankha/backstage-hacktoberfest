@@ -20,6 +20,7 @@ export default function Hero() {
         <button className="self-center text-center py-0.5 rounded bg-blue-700 px-2.5">
           Sign Up
         </button>
+        
       </div>
     </div>
   )
