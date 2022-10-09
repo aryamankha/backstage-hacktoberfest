@@ -50,4 +50,4 @@ Browse Page: https://www.figma.com/file/8RpbZL9OlzJIYUR4k0rTlb/Browse-Page?node-
 
 ## I have updated the header
 
-I updated the header using tailwind.css, also added some cool transitions.
+I updated the profile section using tailwind.css, also added some cool transitions.
