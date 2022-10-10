@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        purple: { 500: "#485ed1", 700: "#364abd" },
+        purple: { 100: "#485ED1", 500: "#485ed1", 700: "#364abd" },
         "dark-gray": "#232428",
         white: "#ffffff",
         gold: { 500: "#ecc55f", 700: "#e2b154", tier: "#FEE39A" },
