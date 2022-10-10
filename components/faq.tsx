@@ -14,18 +14,23 @@ function FaqContainer({ title, text }: FaqContainerType) {
 
 export default function Faq() {
   return (
-    <div className="bg-black py-14 px-44">
-      <h1
-        className="text-6xl font-black border-b-8 pb-6 mb-14 border-b-purple-100"
-        style={{ maxWidth: "550px" }}
-      >
-        FAQ
-      </h1>
+    <div>
+      <div className="bg-black py-14 px-44">
+        <h1
+          className="text-4xl font-black"
+          style={{ maxWidth: "550px" }}
+        >
+          FAQ
+        </h1>
+      <div className="bg-purple-500 h-1 mt-2 w-96"></div>
+      </div>
+    
+    <div className="pl-44">
       <FaqContainer
-        title="What is Backstage?"
-        text="Backstage lets fans support their favorite stars and share in their
-        success by buying NFT tokens and participating in star-led communities."
-      />
+          title="What is Backstage?"
+          text="Backstage lets fans support their favorite stars and share in their
+          success by buying NFT tokens and participating in star-led communities."
+        />
       <FaqContainer
         title="When I buy a star's NFT, what do I get?"
         text="Each NFT has its own set of unique benefits chosen by the star
@@ -49,6 +54,7 @@ export default function Faq() {
         NFT for an artist and they become wildly successful, the value of your
         NFT will skyrocket!"
       />
+    </div>
     </div>
   );
 }
