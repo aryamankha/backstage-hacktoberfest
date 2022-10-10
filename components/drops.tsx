@@ -9,24 +9,24 @@ export default function Drops() {
             <div className="card-container flex flex-row gap-5 h-96">
                 <div className="cont">
                     <div className="card1 h-64 w-64 border-solid border-black rounded-lg border-2 mt-8 mb-5 ml-5">
-                        <h1 className="text-black text-2xl font-bold font-sans m-3 w-36">Collection Title 1</h1>
+                        <h1 className="text-black text-2xl font-bold font-sans m-3 w-36">NFT Title 1</h1>
                         <p className="text-black mt-36 ml-3">Artist Name</p>
                     </div>
-                    <button className="self-center text-center py-0.5 rounded bg-purple-500 px-2.5 ml-5">Sign Up</button>
+                    <button className="self-center text-center py-0.5 rounded bg-purple-500 px-2.5 ml-5">Buy now</button>
                 </div>
                 <div className="cont">
                     <div className="card2 h-64 w-64 border-solid border-black rounded-lg border-2 mt-8 mb-5 ml-5">
-                        <h1 className="text-black text-2xl font-bold font-sans m-3 w-36">Collection Title 2</h1>
+                        <h1 className="text-black text-2xl font-bold font-sans m-3 w-36">NFT Title 2</h1>
                         <p className="text-black mt-36 ml-3">Artist Name</p>
                     </div>
-                    <button className="self-center text-center py-0.5 rounded bg-purple-500 px-2.5 ml-5">Sign Up</button>
+                    <button className="self-center text-center py-0.5 rounded bg-purple-500 px-2.5 ml-5">Buy now</button>
                 </div>
                 <div className="cont">
                     <div className="card3 h-64 w-64 border-solid border-black rounded-lg border-2 mt-8 mb-5 ml-5">
-                        <h1 className="text-black text-2xl font-bold font-sans m-3 w-36">Collection Title 3</h1>
+                        <h1 className="text-black text-2xl font-bold font-sans m-3 w-36">NFT Title 3</h1>
                         <p className="text-black mt-36 ml-3">Artist Name</p>
                     </div>
-                    <button className="self-center text-center py-0.5 rounded bg-purple-500 px-2.5 ml-5">Sign Up</button>
+                    <button className="self-center text-center py-0.5 rounded bg-purple-500 px-2.5 ml-5">Buy now</button>
                 </div>
             </div>
         </div>
