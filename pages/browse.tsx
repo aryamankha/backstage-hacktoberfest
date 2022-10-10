@@ -6,7 +6,7 @@ const Browse = () => {
       <div className="headerContainer bg-[#232428]">
         <Header />
       </div>
-      <div className="searchSection h-[40vh] px-[20%] bg-[url('../public/images/artist-concert.jpg')] bg-center py-16">
+      <div className="searchSection h-[40vh] px-[18%] bg-[url('../public/images/artist-concert.jpg')] bg-center py-16">
         <div className="searchContainer flex  mx-auto ">
           <input
             type="search"
@@ -48,35 +48,32 @@ const Browse = () => {
       </div>
 
       <div className="cardContainer mx-[7%] my-[4rem] flex flex-wrap gap-[5rem] justify-center">
-        <div className="card flex justify-center items-center h-[370px] w-[270px] border-black border-[3px] rounded-xl">
-          NFT
+        <div className="card flex justify-center h-[370px] text-[1.5rem] w-[270px] py-8 border-black border-[3px] rounded-xl">
+          NFT Card
         </div>
-        <div className="card flex justify-center items-center h-[370px] w-[270px] border-black border-[3px] rounded-xl">
-          NFT
+        <div className="card flex justify-center h-[370px] text-[1.5rem] w-[270px] py-8 border-black border-[3px] rounded-xl">
+          NFT Card
         </div>
-        <div className="card flex justify-center items-center h-[370px] w-[270px] border-black border-[3px] rounded-xl">
-          NFT
+        <div className="card flex justify-center h-[370px] text-[1.5rem] w-[270px] py-8 border-black border-[3px] rounded-xl">
+          NFT Card
         </div>
-        <div className="card flex justify-center items-center h-[370px] w-[270px] border-black border-[3px] rounded-xl">
-          NFT
+        <div className="card flex justify-center h-[370px] text-[1.5rem] w-[270px] py-8 border-black border-[3px] rounded-xl">
+          NFT Card
         </div>
-        <div className="card flex justify-center items-center h-[370px] w-[270px] border-black border-[3px] rounded-xl">
-          NFT
+        <div className="card flex justify-center h-[370px] text-[1.5rem] w-[270px] py-8 border-black border-[3px] rounded-xl">
+          NFT Card
         </div>
-        <div className="card flex justify-center items-center h-[370px] w-[270px] border-black border-[3px] rounded-xl">
-          NFT
+        <div className="card flex justify-center h-[370px] text-[1.5rem] w-[270px] py-8 border-black border-[3px] rounded-xl">
+          NFT Card
         </div>
-        <div className="card flex justify-center items-center h-[370px] w-[270px] border-black border-[3px] rounded-xl">
-          NFT
+        <div className="card flex justify-center h-[370px] text-[1.5rem] w-[270px] py-8 border-black border-[3px] rounded-xl">
+          NFT Card
         </div>
-        <div className="card flex justify-center items-center h-[370px] w-[270px] border-black border-[3px] rounded-xl">
-          NFT
+        <div className="card flex justify-center h-[370px] text-[1.5rem] w-[270px] py-8 border-black border-[3px] rounded-xl">
+          NFT Card
         </div>
-        <div className="card flex justify-center items-center h-[370px] w-[270px] border-black border-[3px] rounded-xl">
-          NFT
-        </div>
-        <div className="card flex justify-center items-center h-[370px] w-[270px] border-black border-[3px] rounded-xl">
-          NFT
+        <div className="card flex justify-center h-[370px] text-[1.5rem] w-[270px] py-8 border-black border-[3px] rounded-xl">
+          NFT Card
         </div>
       </div>
       <div className="footerSection bg-[#777984] py-3 text-[1.2rem] flex items-center">
