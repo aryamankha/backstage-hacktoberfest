@@ -25,7 +25,7 @@ export default function Faq() {
       <div className="bg-purple-500 h-1 mt-2 w-96"></div>
       </div>
     
-    <div className="pl-44">
+    <div className="px-44">
       <FaqContainer
           title="What is Backstage?"
           text="Backstage lets fans support their favorite stars and share in their
