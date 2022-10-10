@@ -11,24 +11,47 @@ function FaqContainer({ title, text }: FaqContainerType) {
 
 export default function Faq() {
   return (
-    <div className="bg-black py-14 px-44">
-      <h1 className="text-6xl font-black border-b-8 pb-6 mb-14 border-b-purple-100" style={{ maxWidth: '550px' }}>
-        FAQ
-      </h1>
+    <div>
+      <div className="bg-black py-14 px-44">
+        <h1
+          className="text-4xl font-black"
+          style={{ maxWidth: "550px" }}
+        >
+          FAQ
+        </h1>
+      <div className="bg-purple-500 h-1 mt-2 w-96"></div>
+      </div>
+    
+    <div className="px-44">
       <FaqContainer
-        title="Why is this even a good idea?"
-        text="By letting fans buy into their favorite artists’ success, they can help the creators they love succeed while sharing in that sucess."
+          title="What is Backstage?"
+          text="Backstage lets fans support their favorite stars and share in their
+          success by buying NFT tokens and participating in star-led communities."
+        />
+      <FaqContainer
+        title="When I buy a star's NFT, what do I get?"
+        text="Each NFT has its own set of unique benefits chosen by the star
+        themselves. All NFTs come with access to that star's private
+        Discord, but other potential benefits include access to exclusive
+        merchandise, first notification when event tickets drop, and
+        personalized content from the star!"
       />
       <FaqContainer
-        title="How did such an incredible company come to be?"
-        text="Frankly, that’s not information I can discolse at the moment. What I can
-        tell you is that we’re the best and there’s really no one better, so
-        rest assured we’re gonna IPO within like a year or two."
+        title="What makes Backstage unique?"
+        text="Backstage is focused on helping early-stage stars build their brand from
+        the ground up. We're the only platform in the business of actually
+        getting stars discovered by agents, talent scouts, and industry veterans
+        that can take their career to the next level. For you as a fan, this
+        means supporting your favorite stars on Backstage gets them one step
+        closer to hitting it big."
       />
       <FaqContainer
-        title="Why is Jorge so hot?"
-        text="Agreed."
+        title="How does Backstage let me share in the success of my stars?"
+        text="Each NFT minted through Backstage is ordered, which means if you buy an
+        NFT for an artist and they become wildly successful, the value of your
+        NFT will skyrocket!"
       />
+    </div>
     </div>
   );
 }

@@ -10,5 +10,5 @@
 - Make changes to the code
 - Commit the changes
 - Push the changes to the forked repository
-- Create a pull request (PR)
+- Create a pull request (with a screenshot if it's a frontend task)
 - Wait for your PR to get reviewed
