@@ -24,7 +24,7 @@ const Header = () => {
             <div className="flex items-center">
             <span className="mx-3">
                 <Link href="/"><a>
-                    <button className="self-center text-center py-0.5 rounded bg-blue-700 px-2.5">Sign Up</button>
+                    <button className="self-center text-center py-0.5 rounded bg-[#485ED1] px-2.5 hover:bg-[#364aaf]">Sign Up</button>
                 </a></Link>
             </span>
             <span className="mx-3">
