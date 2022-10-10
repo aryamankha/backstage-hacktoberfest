@@ -15,6 +15,7 @@ export default function Hero() {
         <button className="text-[1.1rem] mx-[1rem] bg-[#485ED1] px-5 py-2 rounded-lg hover:bg-[#364aaf]">
           Sign Up
         </button>
+        
       </div>
     </div>
   );
