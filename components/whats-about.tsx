@@ -18,7 +18,7 @@ export default function WhatIsItAbout() {
         className="text-6xl font-black border-b-8 pb-6 mb-12 border-b-purple-100"
         style={{ maxWidth: "550px" }}
       >
-        What &apos; s it all about?
+        What&apos;s it all about?
       </h1>
       <div className="flex justify-between w-full mb-20">
         <Card
@@ -30,7 +30,7 @@ export default function WhatIsItAbout() {
         <Card title="Success Shared" />
       </div>
       <p className="text-2xl font-normal">
-        By letting fans buy into their favorite artists &apos; success, they can help
+        By letting fans buy into their favorite artists&apos; success, they can help
         the creators they love succeed while sharing in that success.
       </p>
     </div>
