@@ -47,7 +47,3 @@ Home Page: https://www.figma.com/file/I03uCw196ZjlzxHQelByBU/Landing-Page?node-i
 Profile Page: https://www.figma.com/file/aTnodnfVNVkOus9dLZ5U96/Profile-Page?node-id=0%3A1
 
 Browse Page: https://www.figma.com/file/8RpbZL9OlzJIYUR4k0rTlb/Browse-Page?node-id=0%3A1
-
-## I have updated the header
-
-I updated the profile section using tailwind.css, also added some cool transitions.
