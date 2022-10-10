@@ -3,6 +3,7 @@ import Head from "next/head";
 import Hero from "../components/hero";
 import Drops from "../components/drops";
 import Faq from "../components/faq";
+import WhatIsItAbout from "../components/whats-about";
 import Header from "./header";
 
 const Home: NextPage = () => {
@@ -17,6 +18,7 @@ const Home: NextPage = () => {
       </Head>
       <Header/>
       <Hero/>
+      <WhatIsItAbout />
       <Drops/>
       <Faq />
     </div>

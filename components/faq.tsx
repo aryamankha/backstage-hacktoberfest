@@ -1,6 +1,3 @@
-import Background from "../public/images/artist-concert.jpg";
-import Image from "next/image";
-
 type FaqContainerType = { title: string; text: string };
 
 function FaqContainer({ title, text }: FaqContainerType) {
