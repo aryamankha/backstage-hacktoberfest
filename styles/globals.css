@@ -27,3 +27,54 @@ a {
     background: black;
   }
 }
+
+.h2 {
+  color: #ffc107;
+}
+
+footer {
+  background-color: black;
+  color: whitesmoke;
+  padding: 3% 0 2% 0;
+}
+
+.footerHeadingCol {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+/* policies, terms of service and contact */
+.footer_clickable:hover {
+  color: #ffc107;
+  text-decoration: none;
+}
+.socialMedia /* social media section */ {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.socialMediaIcon /* individual icons styling */ {
+  margin-right: 15px;
+  font-size: 2.2rem;
+}
+
+.socialMediaIcon:hover /* hover styles */ {
+  color: purple !important;
+}
+
+
+
+.addressRow .col-auto {
+  padding: 0;
+  margin: 0;
+}
+
+footer a {
+  color: snow;
+}
+
+.copyright {
+  text-align: center;
+  margin: 40px auto 20px auto;
+}
