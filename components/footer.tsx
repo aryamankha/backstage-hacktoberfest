@@ -29,8 +29,8 @@ export default function Footer() {
             <div className="row contactRow">
                 <p className='flex gap-6'>
                 <a className="footer_clickable text-purple-500 font-bold text-lg" href="#">Policies</a> |
-                <a className="footer_clickable text-purple-500 font-bold text-lg" href="./terms_of_service.html">Terms of Service</a> |
-                <a className="footer_clickable text-purple-500 font-bold text-lg" href="./contactus.html">Contact Us</a>
+                <a className="footer_clickable text-purple-500 font-bold text-lg" href="#">Terms of Service</a> |
+                <a className="footer_clickable text-purple-500 font-bold text-lg" href="#">Contact Us</a>
 
                 </p>
             </div>
