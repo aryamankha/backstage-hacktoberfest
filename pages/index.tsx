@@ -5,6 +5,7 @@ import Drops from "../components/drops";
 import Faq from "../components/faq";
 import WhatIsItAbout from "../components/whats-about";
 import Header from "../components/header";
+import Footer from "../components/footer"
 
 const Home: NextPage = () => {
   return (
@@ -26,6 +27,7 @@ const Home: NextPage = () => {
       <WhatIsItAbout />
       <Drops />
       <Faq />
+      <Footer />
     </div>
   );
 };
