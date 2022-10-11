@@ -1,4 +1,5 @@
 import Header from "../components/header";
+import Footer from "../components/footer";
 
 const profile = () => {
   return (
@@ -47,6 +48,7 @@ const profile = () => {
         </div>
         <div className="profileRightSection"></div>
       </div>
+      <Footer />
     </div>
   );
 };

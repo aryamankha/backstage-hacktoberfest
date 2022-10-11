@@ -1,5 +1,5 @@
 import Header from "../components/header";
-
+import Footer from "../components/footer";
 const Browse = () => {
   return (
     <div className="browse">
@@ -76,16 +76,7 @@ const Browse = () => {
           NFT Card
         </div>
       </div>
-      <div className="footerSection bg-[#777984] py-3 text-[1.2rem] flex items-center">
-        <div className="socialIconContainer absolute right-3 flex gap-2">
-          <div className="socialIcon w-6 h-6 rounded border-white border-[1px]"></div>
-          <div className="socialIcon w-6 h-6 rounded border-white border-[1px]"></div>
-          <div className="socialIcon w-6 h-6 rounded border-white border-[1px]"></div>
-        </div>
-        <div className="text-white w-[100%] text-center z-10">
-          BackStage © 2022
-        </div>
-      </div>
+      <Footer />
     </div>
   );
 };
