@@ -1,17 +1,11 @@
-import Image, { StaticImageData } from "next/image";
-import Win from "../public/images/win.jpg";
-import Create from "../public/images/create.jpg";
-import Buy from "../public/images/buy.jpg";
+type WhatIsItAboutType = { title: string };
 
-type WhatIsItAboutType = { title: string; img: StaticImageData };
-
-function Card({ title, img }: WhatIsItAboutType) {
+function Card({ title }: WhatIsItAboutType) {
   return (
     <div
-      className="border border-white rounded-xl p-4 flex justify-center items-end flex-col"
+      className="border border-white rounded-xl p-4 flex justify-center items-end"
       style={{ width: "323px", height: "323px" }}
     >
-      <Image src={img} alt={title} />
       <h2 className="text-4xl font-light">{title}</h2>
     </div>
   );
@@ -27,13 +21,17 @@ export default function WhatIsItAbout() {
         What&apos;s it all about?
       </h1>
       <div className="flex justify-between w-full mb-20">
-        <Card title="Artists Drop" img={Win} />
-        <Card title="Fans Buy" img={Buy} />
-        <Card title="Success Shared" img={Create} />
+        <Card
+          title="Artists Drop"
+        />
+        <Card
+          title="Fans Buy"
+        />
+        <Card title="Success Shared" />
       </div>
       <p className="text-2xl font-normal">
-        By letting fans buy into their favorite artists&apos; success, they can
-        help the creators they love succeed while sharing in that success.
+        By letting fans buy into their favorite artists&apos; success, they can help
+        the creators they love succeed while sharing in that success.
       </p>
     </div>
   );
