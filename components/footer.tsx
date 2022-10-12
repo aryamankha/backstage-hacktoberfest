@@ -6,14 +6,14 @@ export default function Footer() {
   return (
     <div>
         <footer id="footer" className=' border-t-2 border-purple-500'>
-            <div className="container mx-auto w-fit">
-            <div className="w-full sm:row">
-                <div className="w-full sm:col-9 footerHeadingCol my-5">
+            <div className="container grid mx-auto px-10 sm:px-20 w-full">
+            <div className="sm:grid grid-cols-6 w-full">
+                <div className="sm:col-span-4 footerHeadingCol my-5">
                 <h2 className=" font-extrabold text-4xl text-white">Backstage</h2>
 
                 </div>
 
-                <div className="w-full sm:col-3 justify-start sm:justify-end flex gap-8 sm:mr-10 my-5">
+                <div className="sm:col-span-2 justify-start sm:justify-end flex gap-8 sm:mr-10 my-5">
                 <a href="#" className=" text-4xl">
                     <span><BsFacebook /></span></a>
                 <a href="#" className=" text-4xl">
