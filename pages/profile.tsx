@@ -46,7 +46,12 @@ const profile = () => {
             </div>
           </div>
         </div>
-        <div className="profileRightSection"></div>
+        <div className="profileRightSection">
+          <div className="profileRightSectionContainer text-[54px] px-6 pt-4">
+            NFTs
+            </div>
+            <div className="w-32 h-2 bg-blue-600 mx-5"></div>
+        </div>
       </div>
       <Footer />
     </div>
