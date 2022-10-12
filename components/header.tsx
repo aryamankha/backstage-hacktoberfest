@@ -32,6 +32,7 @@ const Header = () => {
           MetaMask
         </button>
         <div className="userIcon mx-[1rem] mr-[1rem] w-[40px] h-[40px] cursor-pointer  hover:scale-110 duration-100 ease-in">
+          <Link href="/profile">
           <Image
             className="shadow-lg"
             src={USerIcon}
@@ -39,6 +40,7 @@ const Header = () => {
             width={40}
             height={40}
           />
+          </Link>
         </div>
         <img src="../public/images/Profile.png" alt="" />
       </div>
