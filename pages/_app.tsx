@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
+import { Auth0Provider } from "@auth0/auth0-react";
 
 if (
   typeof window !== "undefined" &&
@@ -11,7 +12,15 @@ if (
 }
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+
+ const redirect = process.browser ? window.location.origin : "http://localhost:3000"; 
+  
+  return <Auth0Provider 
+    domain="dev-i96d456w.us.auth0.com"
+    clientId="UxI0I2d2geF82mFwkH68DoqE0FJxaRHN"
+    redirectUri={redirect}
+    >
+  <Component {...pageProps} /> </Auth0Provider>;
 }
 
 export default MyApp;
