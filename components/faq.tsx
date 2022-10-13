@@ -19,7 +19,7 @@ export default function Faq() {
         >
           FAQ
         </h1>
-      <div className="bg-purple-500 h-1 mt-2 w-96"></div>
+      <div className="bg-purple-500 h-1 mt-2 w-28 md:w-96"></div>
       </div>
     
     <div className="px-44">

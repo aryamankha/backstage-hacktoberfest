@@ -23,7 +23,7 @@ const Header = () => {
         <div className="logo text-[2rem] font-bold cursor-pointer">
           <Link href="/"> Backstage </Link>
         </div>
-        <div className="browse text-[1.2rem] font-light mx-[1.5rem] ml-[3rem] cursor-pointer">
+        <div className="browse text-[1.2rem] font-light mx-[1.5rem] ml-[3rem] hidden md:block cursor-pointer">
           <Link href="/browse"> Browse</Link>
         </div>
       </div>
