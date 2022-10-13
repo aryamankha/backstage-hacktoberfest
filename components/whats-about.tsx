@@ -34,7 +34,7 @@ function Card({ title, img, description }: WhatIsItAboutType) {
   return (
     <div
       className="p-4 flex justify-center flex-col "
-      style={{ width: "323px", height: "360px" }}
+      style={{ width: "323px", height: "450px" }}
     >
       <Image src={img} alt={title} className="rounded-xl" />
       <h2 className="text-4xl font-light my-4">{title}</h2>
