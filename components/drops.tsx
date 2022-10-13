@@ -4,9 +4,9 @@ export default function Drops() {
         <div className="drops-section bg-white h-max px-5 py-10">
             <div className="header bg-white">
                 <h1 className="text-black text-4xl font-bold font-sans ml-5">Latest Drops</h1>
-                <div className="bg-purple-500 h-1 mt-2 w-96 ml-5"></div>
+                <div className="bg-purple-500 h-1 mt-2 w-64 md:w-96 ml-5"></div>
             </div>
-            <div className="card-container flex flex-row gap-5 h-96">
+            <div className="card-container flex md:flex-row flex-col gap-5 h-96">
                 <div className="cont">
                     <div className="card1 h-64 w-64 border-solid border-black rounded-lg border-2 mt-8 mb-5 ml-5">
                         <h1 className="text-black text-2xl font-bold font-sans m-3 w-36">NFT Title 1</h1>
