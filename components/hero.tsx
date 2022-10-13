@@ -1,6 +1,7 @@
 import Background from "../public/images/artist-concert.jpg";
 import Image from "next/image";
 import { useAuth0 } from "@auth0/auth0-react";
+import Header from "./header";
 
 export default function Hero() {
   const { loginWithRedirect } = useAuth0();
