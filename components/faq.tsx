@@ -11,8 +11,8 @@ function FaqContainer({ title, text }: FaqContainerType) {
 
 export default function Faq() {
   return (
-    <div>
-      <div className="bg-black py-14 px-44">
+    <div className="my-2">
+      <div className="bg-black py-14 px-2 sm:px-44">
         <h1
           className="text-4xl font-black"
           style={{ maxWidth: "550px" }}
@@ -22,7 +22,7 @@ export default function Faq() {
       <div className="bg-purple-500 h-1 mt-2 w-28 md:w-96"></div>
       </div>
     
-    <div className="px-44">
+    <div className="px-4 sm:px-20 md:px-44">
       <FaqContainer
           title="What is Backstage?"
           text="Backstage lets fans support their favorite stars and share in their
