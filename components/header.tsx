@@ -6,7 +6,7 @@ import { useAuth0 } from '@auth0/auth0-react'
 
 
 const Header = () => {
-  const { isAuthenticated } = useAuth0()  
+  const { isAuthenticated, user } = useAuth0()  
   return (
     <>
     {isAuthenticated && 
@@ -40,7 +40,7 @@ const Header = () => {
           <Link href="/profile">
           <Image
             className="shadow-lg"
-            src={USerIcon}
+            src={user?.picture || USerIcon}
             alt="Picture of the author"
             width={40}
             height={40}
