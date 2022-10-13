@@ -1,28 +1,32 @@
+
 type FaqContainerType = { title: string; text: string };
 
 function FaqContainer({ title, text }: FaqContainerType) {
   return (
     <>
-      <h2 className="text-4xl font-light mb-4">{title}</h2>
+    <div className = "faq-item">
+      <h2 className="text-4xl font-light mb-4 question">{title}</h2>
+      <div className="answer">
       <p className="text-2xl font-normal mb-10">{text}</p>
+      </div>
+      </div>
     </>
   );
 }
 
 export default function Faq() {
   return (
-    <div>
-      <div className="bg-black py-14 px-44">
+    <div className="faq-section">
+      <div className=" py-14 px-44">
         <h1
-          className="text-4xl font-black"
+          className="text-4xl faq-heading"
           style={{ maxWidth: "550px" }}
         >
           FAQ
         </h1>
-      <div className="bg-purple-500 h-1 mt-2 w-96"></div>
       </div>
     
-    <div className="px-44">
+    <div className="px-44 faq-container">
       <FaqContainer
           title="What is Backstage?"
           text="Backstage lets fans support their favorite stars and share in their

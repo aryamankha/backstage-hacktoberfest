@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
 html,
 body {
   padding: 0;
@@ -77,4 +79,65 @@ footer a {
 .copyright {
   text-align: center;
   margin: 40px auto 20px auto;
+}
+
+/* FAQ SECTION */
+
+.faq-section{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  background: #212020;
+  font-family: Poppins;
+
+}
+
+.faq-heading{
+  color: white;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.faq-container{
+  width: 100%;
+  max-width: 80rem;
+  
+}
+
+.faq-item{
+  background-color: #283042;
+  border-radius: .4rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  box-shadow: .5rem 2px .5rem rgba(0,0,0,.1);
+}
+.question{
+color: rgba(255,255,255,0.8);
+font-size:1.6rem;
+background-color: #283042;
+width: 100%;
+padding: 1rem;
+}
+
+.answer{
+  background-color: #212838;
+  position:relative;
+}
+.answer::before{
+  content: "";
+  position: absolute;
+  width:.6rem;
+  height:90%;
+  background-color: #8fc460;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.answer p{
+  color: rgba(255,255,255,0.6);
+  font-size: 1.4rem;
+  padding: 2rem;
 }
