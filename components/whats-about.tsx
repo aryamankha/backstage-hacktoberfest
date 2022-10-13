@@ -45,19 +45,19 @@ function Card({ title, img, description }: WhatIsItAboutType) {
 
 export default function WhatIsItAbout() {
   return (
-    <div className="bg-black py-14 px-44 flex flex-col text-center items-center">
+    <div className="bg-black py-14 md:px-44 flex flex-col text-center justify-center items-center">
       <h1
-        className="text-6xl font-black border-b-8 pb-6 mb-12 border-b-purple-100"
+        className="text-4xl md:text-6xl font-black border-b-8 pb-6 mb-12 border-b-purple-100"
         style={{ maxWidth: "550px" }}
       >
         What&apos;s it all about?
       </h1>
-      <div className="flex justify-center w-full mb-20">
+      <div className="flex flex-col text-left md:text-center md:flex-row  space-y-4 md:space-y-0  mb-20">
         {aboutArr.map((item) => (
           <Card {...item} key={item.title} />
         ))}
       </div>
-      <p className="text-2xl font-normal">
+      <p className="text-lg md:text-2xl font-normal">
         By letting fans buy into their favorite artists&apos; success, they can
         help the creators they love succeed while sharing in that success.
       </p>
