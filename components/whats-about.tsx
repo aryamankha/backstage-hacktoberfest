@@ -23,7 +23,7 @@ const aboutArr: Array<WhatIsItAboutType> = [
     img: Buy,
   },
   {
-    title: "Stars Win",
+    title: "Everyone Wins",
     description:
       "When a star makes it big, fans' NFTs rise in value and everyone wins from the star's success",
     img: Win,
