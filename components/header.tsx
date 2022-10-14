@@ -2,81 +2,81 @@ import Head from "next/head";
 import Image from "next/image";
 import USerIcon from "../public/images/Profile.png";
 import Link from "next/link";
-import { useAuth0 } from '@auth0/auth0-react'
+import { useAuth0 } from "@auth0/auth0-react";
 import MetaMask from "./metamask";
 
-
 const Header = () => {
-  const { isAuthenticated } = useAuth0();
+  const { isAuthenticated, user } = useAuth0();
   return (
     <>
-    {isAuthenticated && 
-    (<div className="header flex justify-between items-center px-[1rem] text-white py-3">
-      <Head>
-        <title>Backstage</title>
-        <meta
-          name="description"
-          content="An NFT marketplace for up-and-coming artists"
-          />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-          rel="stylesheet"
-          />
-      </Head>
-      <div className="headerLeft flex items-center">
-        <div className="logo text-[2rem] font-bold cursor-pointer">
-          <Link href="/"> Backstage </Link>
-        </div>
-        <div className="browse text-[1.2rem] font-light mx-[1.5rem] ml-[3rem] cursor-pointer">
-          <Link href="/browse"> Browse</Link>
-        </div>
-      </div>
-      <div className="headerRight flex items-center justify-center">
-        <MetaMask />
-        <div className="userIcon mx-[1rem] mr-[1rem] w-[40px] h-[40px] cursor-pointer  hover:scale-110 duration-100 ease-in">
-          <Link href="/profile">
-          <Image
-            className="shadow-lg"
-            src={USerIcon}
-            alt="Picture of the author"
-            width={40}
-            height={40}
+      {isAuthenticated && (
+        <div className="header flex justify-between items-center px-[1rem] text-white py-3">
+          <Head>
+            <title>Backstage</title>
+            <meta
+              name="description"
+              content="An NFT marketplace for up-and-coming artists"
             />
-          </Link>
+            <link rel="icon" href="/favicon.ico" />
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link
+              href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+              rel="stylesheet"
+            />
+          </Head>
+          <div className="headerLeft flex items-center">
+            <div className="logo text-[2rem] font-bold cursor-pointer">
+              <Link href="/"> Backstage </Link>
+            </div>
+            <div className="browse text-[1.2rem] font-light mx-[1.5rem] ml-[3rem] hidden md:block cursor-pointer">
+              <Link href="/browse"> Browse</Link>
+            </div>
+          </div>
+          <div className="headerRight flex items-center justify-center">
+            <MetaMask />
+            <div className="userIcon mx-[1rem] mr-[1rem] w-[40px] h-[40px] cursor-pointer  hover:scale-110 duration-100 ease-in">
+              <Link href="/profile">
+                <Image
+                  className="shadow-lg"
+                  src={user?.picture || USerIcon}
+                  alt="Picture of the author"
+                  width={40}
+                  height={40}
+                />
+              </Link>
+            </div>
+            <img src="../public/images/Profile.png" alt="" />
+          </div>
         </div>
-        <img src="../public/images/Profile.png" alt="" />
-      </div>
-    </div>)}
+      )}
 
-    {!isAuthenticated && 
-    (<div className="header flex justify-between items-center px-[1rem] text-white py-3">
-      <Head>
-        <title>Backstage</title>
-        <meta
-          name="description"
-          content="An NFT marketplace for up-and-coming artists"
-          />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-          rel="stylesheet"
-          />
-      </Head>
-      <div className="headerLeft flex items-center">
-        <div className="logo text-[2rem] font-bold cursor-pointer">
-          <Link href="/"> Backstage </Link>
+      {!isAuthenticated && (
+        <div className="header flex justify-between items-center px-[1rem] text-white py-3">
+          <Head>
+            <title>Backstage</title>
+            <meta
+              name="description"
+              content="An NFT marketplace for up-and-coming artists"
+            />
+            <link rel="icon" href="/favicon.ico" />
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link
+              href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+              rel="stylesheet"
+            />
+          </Head>
+          <div className="headerLeft flex items-center">
+            <div className="logo text-[2rem] font-bold cursor-pointer">
+              <Link href="/"> Backstage </Link>
+            </div>
+            <div className="browse text-[1.2rem] font-light mx-[1.5rem] ml-[3rem] cursor-pointer">
+              <Link href="/browse"> Browse</Link>
+            </div>
+          </div>
         </div>
-        <div className="browse text-[1.2rem] font-light mx-[1.5rem] ml-[3rem] cursor-pointer">
-          <Link href="/browse"> Browse</Link>
-        </div>
-      </div>
-    </div>)}
+      )}
     </>
   );
-
 };
 
 export default Header;
