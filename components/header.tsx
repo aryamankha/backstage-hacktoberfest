@@ -6,7 +6,8 @@ import { useAuth0 } from "@auth0/auth0-react";
 import MetaMask from "./metamask";
 
 const Header = () => {
-  const { isAuthenticated, user } = useAuth0();
+  const redirect = process.browser ? window.location.origin : "http://localhost:3000";
+  const { isAuthenticated, user, loginWithRedirect, logout  } = useAuth0();
   return (
     <>
       {isAuthenticated && (
@@ -33,6 +34,9 @@ const Header = () => {
             </div>
           </div>
           <div className="headerRight flex items-center justify-center">
+            <button onClick={() =>logout({returnTo: window.location.origin})} className="text-[1.1rem] mx-[1rem] bg-[#485ED1] px-5 py-2 rounded-lg hover:bg-[#364aaf]">
+                Sign Out
+           </button>
             <MetaMask />
             <div className="userIcon mx-[1rem] mr-[1rem] w-[40px] h-[40px] cursor-pointer  hover:scale-110 duration-100 ease-in">
               <Link href="/profile">
@@ -73,6 +77,9 @@ const Header = () => {
               <Link href="/browse"> Browse</Link>
             </div>
           </div>
+          <button onClick={loginWithRedirect} className="text-[1.1rem] mx-[1rem] bg-[#485ED1] px-5 py-2 rounded-lg hover:bg-[#364aaf]">
+                Sign In
+           </button>
         </div>
       )}
     </>
