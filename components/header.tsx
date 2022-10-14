@@ -3,10 +3,11 @@ import Image from "next/image";
 import USerIcon from "../public/images/Profile.png";
 import Link from "next/link";
 import { useAuth0 } from '@auth0/auth0-react'
+import MetaMask from "./metamask";
 
 
 const Header = () => {
-  const { isAuthenticated } = useAuth0()  
+  const { isAuthenticated } = useAuth0();
   return (
     <>
     {isAuthenticated && 
@@ -33,9 +34,7 @@ const Header = () => {
         </div>
       </div>
       <div className="headerRight flex items-center justify-center">
-        <button className="SignUp text-[1.1rem] mx-[1rem] bg-[#485ED1] px-5 py-2 rounded-lg text-white  hover:bg-[#364aaf] shadow-lg">
-          MetaMask
-        </button>
+        <MetaMask />
         <div className="userIcon mx-[1rem] mr-[1rem] w-[40px] h-[40px] cursor-pointer  hover:scale-110 duration-100 ease-in">
           <Link href="/profile">
           <Image
