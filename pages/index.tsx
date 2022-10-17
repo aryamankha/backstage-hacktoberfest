@@ -38,8 +38,7 @@ export default Home;
 export const getServerSideProps: GetServerSideProps = async () => {
   const res = await fetch(`https://backstage-hacktoberfest-service.vercel.app/api/nfts`);
   const nfts_json = await res.json();
-  const nfts = getRandomNFTs(nfts_json.nfts, 4);
-  console.log('getServerSideProps', nfts);
+  const nfts = getRandomNFTs(nfts_json.nfts, 6);
   return {
     props: {
       nfts
@@ -50,7 +49,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
 // function to get a random item from an array
 const getRandomNFTs = (nfts, count) => {
   const rNFTs = [];
-  for (const i of new Array(count)) {
+  for (let i = 0; i < count; i++) {
     // get random index value
     const randomIndex = Math.floor(Math.random() * nfts.length);
   
