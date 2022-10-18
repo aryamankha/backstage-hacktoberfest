@@ -12,9 +12,9 @@ function FaqContainer({ title, text }: FaqContainerType) {
 export default function Faq() {
   return (
     <div>
-      <div className="bg-black py-14 px-44">
+      <div className="bg-black py-14 px-44 text-white my-8">
         <h1
-          className="text-4xl font-black"
+          className="text-6xl font-black"
           style={{ maxWidth: "550px" }}
         >
           FAQ
