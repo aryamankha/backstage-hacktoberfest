@@ -51,7 +51,7 @@ const DropsItem:FC<DropItemsProps> = ({ nft }) => {
         <h1 className="text-black text-2xl font-bold font-sans m-3 w-36">
           {nft.name}
         </h1>
-        <Image src={nft.image} width='150px' height='150px'/>
+        <Image src={nft.image} width='150px' height='150px' alt='NFT Image'/>
         <p className="text-black ml-3">{nft.artist.username}</p>
       </div>
       <button className="self-center text-center py-0.5 rounded bg-purple-500 px-2.5 ml-5">
