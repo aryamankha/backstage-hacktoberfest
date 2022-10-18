@@ -8,7 +8,8 @@ import WhatIsItAbout from "../components/whats-about";
 import Header from "../components/header";
 import Footer from "../components/footer"
 
-const Home: NextPage = (props) => {
+
+const Home: NextPage = ({ nfts }: any) => {
   return (
     <div>
       <Head>
@@ -26,7 +27,7 @@ const Home: NextPage = (props) => {
       </div>
       <Hero />
       <WhatIsItAbout />
-      <Drops nfts={props.nfts}/>
+      <Drops nfts={nfts}/>
       <Faq />
       <Footer />
     </div>
