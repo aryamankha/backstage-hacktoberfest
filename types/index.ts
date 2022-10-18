@@ -13,3 +13,7 @@ export type Artist = {
   last_name: string;
   username: string;
 };
+
+export interface HomeProps {
+  nfts: [NFT]
+};

@@ -6,10 +6,11 @@ import Drops from "../components/drops";
 import Faq from "../components/faq";
 import WhatIsItAbout from "../components/whats-about";
 import Header from "../components/header";
-import Footer from "../components/footer"
+import Footer from "../components/footer";
 
+import { HomeProps, NFT } from '../types';
 
-const Home: NextPage = ({ nfts }: any) => {
+const Home:NextPage<HomeProps> = ({ nfts }) => {
   return (
     <div>
       <Head>
@@ -48,7 +49,10 @@ export const getServerSideProps: GetServerSideProps = async () => {
 }
 
 // function to get a random item from an array
-const getRandomNFTs = (nfts, count) => {
+interface GetRandomNFTProps {
+  (nfts: [NFT], count: number): any;
+};
+const getRandomNFTs:GetRandomNFTProps = (nfts, count) => {
   const rNFTs = [];
   for (let i = 0; i < count; i++) {
     // get random index value
