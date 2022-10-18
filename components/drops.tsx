@@ -11,7 +11,7 @@ interface DropsProps {
 const Drops:FC<DropsProps> = ({ nfts }) => {
   return (
     <div className="drops-section bg-white h-max px-5 py-10">
-      <div className="header bg-white">
+      <div className="header flex flex-col items-center md:items-start">
         <h1 className="text-black text-4xl font-bold font-sans ml-5">
           Latest Drops
         </h1>
