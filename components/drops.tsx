@@ -18,7 +18,11 @@ type Artist = {
   username: string;
 };
 
-export default function Drops({ nfts }) {
+interface DropsProps {
+  nfts: [NFT]
+};
+
+const Drops:FC<DropsProps> = ({ nfts }) => {
   return (
     <div className="drops-section bg-white h-max px-5 py-10">
       <div className="header bg-white">
@@ -32,7 +36,9 @@ export default function Drops({ nfts }) {
       </div>
     </div>
   );
-}
+};
+
+export default Drops;
 
 interface DropItemsProps {
   nft: NFT
