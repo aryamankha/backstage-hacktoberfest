@@ -1,5 +1,22 @@
 import Link from "next/link";
 import Image from 'next/image';
+import { FC } from 'react';
+
+type NFT = {
+  id: string;
+  description: string;
+  image: string;
+  name: string;
+  price: number;
+  artist: Artist
+};
+
+type Artist = {
+  id: string;
+  first_name: string;
+  last_name: string;
+  username: string;
+};
 
 export default function Drops({ nfts }) {
   return (
@@ -17,7 +34,11 @@ export default function Drops({ nfts }) {
   );
 }
 
-const DropsItem = ({ nft }) => {
+interface DropItemsProps {
+  nft: NFT
+};
+
+const DropsItem:FC<DropItemsProps> = ({ nft }) => {
   return (
     <div className="cont">
       <div className="card1 h-64 w-64 border-solid border-black rounded-lg border-2 mt-8 mb-5 ml-5">
