@@ -5,7 +5,7 @@ import { FC } from 'react';
 import { NFT } from '../types';
 
 interface DropsProps {
-  nfts: [NFT]
+  nfts: NFT[]
 };
 
 const Drops:FC<DropsProps> = ({ nfts }) => {

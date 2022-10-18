@@ -8,9 +8,9 @@ import WhatIsItAbout from "../components/whats-about";
 import Header from "../components/header";
 import Footer from "../components/footer";
 
-import { HomeProps, NFT } from '../types';
+import { GetNFTs, HomeProps } from '../types';
 
-const Home:NextPage<HomeProps> = ({ nfts }) => {
+const Home: NextPage<HomeProps> = ({ nfts }) => {
   return (
     <div>
       <Head>
@@ -38,29 +38,11 @@ const Home:NextPage<HomeProps> = ({ nfts }) => {
 export default Home;
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const res = await fetch(`https://backstage-hacktoberfest-service.vercel.app/api/nfts`);
-  const nfts_json = await res.json();
-  const nfts = getRandomNFTs(nfts_json.nfts, 6);
+  const res = await fetch(`https://backstage-hacktoberfest-service.vercel.app/api/nfts?limit=6`);
+  const { nfts }: GetNFTs = await res.json();  
   return {
     props: {
       nfts
     }
   };
-}
-
-// function to get a random item from an array
-interface GetRandomNFTProps {
-  (nfts: [NFT], count: number): any;
-};
-const getRandomNFTs:GetRandomNFTProps = (nfts, count) => {
-  const rNFTs = [];
-  for (let i = 0; i < count; i++) {
-    // get random index value
-    const randomIndex = Math.floor(Math.random() * nfts.length);
-  
-    // get random item
-    const item = nfts[randomIndex];
-    rNFTs.push(item);
-  }
-  return rNFTs;
 }

@@ -15,5 +15,10 @@ export type Artist = {
 };
 
 export interface HomeProps {
-  nfts: [NFT]
+  nfts: NFT[]
+};
+
+export interface GetNFTs {
+  nfts: NFT[];
+  message: string;
 };
