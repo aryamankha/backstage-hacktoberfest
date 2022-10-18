@@ -45,9 +45,9 @@ function Card({ title, img, description }: WhatIsItAboutType) {
 
 export default function WhatIsItAbout() {
   return (
-    <div className="bg-black py-14 md:px-44 flex flex-col text-center justify-center items-center">
+    <div className="text-white bg-black py-14 md:px-44 flex flex-col text-center justify-center items-center">
       <h1
-        className="text-4xl md:text-6xl font-black border-b-8 pb-6 mb-12 border-b-purple-100"
+        className=" text-4xl md:text-6xl font-black border-b-8 pb-6 mb-12 border-b-purple-100"
         style={{ maxWidth: "550px" }}
       >
         What&apos;s it all about?
