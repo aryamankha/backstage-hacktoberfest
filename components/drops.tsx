@@ -2,21 +2,7 @@ import Link from "next/link";
 import Image from 'next/image';
 import { FC } from 'react';
 
-type NFT = {
-  id: string;
-  description: string;
-  image: string;
-  name: string;
-  price: number;
-  artist: Artist
-};
-
-type Artist = {
-  id: string;
-  first_name: string;
-  last_name: string;
-  username: string;
-};
+import { NFT } from '../types';
 
 interface DropsProps {
   nfts: [NFT]
