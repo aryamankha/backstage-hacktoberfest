@@ -1,12 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FC } from "react";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 
-//swiper imports 
+//swiper imports
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 //swiper used for swipable carousal
 
 import { NFT } from "../types";
@@ -16,31 +16,19 @@ interface DropsProps {
 }
 
 const Drops: FC<DropsProps> = ({ nfts }) => {
-  const [slidesPerView, setSlidesPerView] = useState(0);
+
+  const [slidesPerView, setSlidesPerView] = useState(4);
 
   useEffect(() => {
-    switch (process.browser) {
-      case window.innerWidth<540:
-        setSlidesPerView(1.3);
-        break;
-      case window.innerWidth<768:
-        setSlidesPerView(2);
-        break;
-      case window.innerWidth<1024:
-        setSlidesPerView(2.5);
-        break;
-      case window.innerWidth<1280:
-        setSlidesPerView(3.3);
-        break;
-      case window.innerWidth<1536:
-        setSlidesPerView(4.5);
-        break;
-      default:
-        setSlidesPerView(5.3);
-  }
-    
-  }, [])
-  
+    addEventListener("resize", () => {
+      handleResize();
+    });
+    const handleResize = () => {
+      const pageNo = window.innerWidth / 350;
+      setSlidesPerView(pageNo);
+    };
+    handleResize();
+  }, []);
 
   return (
     <div className="drops-section bg-white h-max px-5 py-10">
@@ -60,7 +48,7 @@ const Drops: FC<DropsProps> = ({ nfts }) => {
       >
         {nfts.map((nft) => (
           <SwiperSlide key={nft.id}>
-            <DropsItem nft={nft}  />
+            <DropsItem nft={nft} />
           </SwiperSlide>
         ))}
       </Swiper>
