@@ -59,8 +59,8 @@ const Drops: FC<DropsProps> = ({ nfts }) => {
         className="card-container flex md:flex-row flex-col gap-5 h-96 "
       >
         {nfts.map((nft) => (
-          <SwiperSlide>
-            <DropsItem nft={nft} key={nft.id} />
+          <SwiperSlide key={nft.id}>
+            <DropsItem nft={nft}  />
           </SwiperSlide>
         ))}
       </Swiper>
