@@ -22,3 +22,15 @@ export interface GetNFTs {
   nfts: NFT[];
   message: string;
 };
+
+export type User = {
+  id: string;
+  sub: string;
+  picture: string;
+  first_name: string;
+  last_name: string;
+  type: string[];
+  username: string;
+  nfts_owned: string[]
+  token: string;
+};
