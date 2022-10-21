@@ -12,7 +12,7 @@ interface GlobalLayoutProps {
 };
 
 const initialState = {
-  id: '', first_name: '', last_name: '', type: [''], username: '', nfts_owned: [''], token: ''
+  id: '', first_name: '', last_name: '', type: [''], username: '', nfts_owned: [''], token: '', picture: '', sub: ''
 };
 
 const UserContext = createContext<UserContextInterface | null>({} as UserContextInterface);
