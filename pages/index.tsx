@@ -11,8 +11,11 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import { GetNFTs, HomeProps } from '../types';
 import { getCode, getAuthToken } from '../utils';
+import { useUser } from '../contexts/UserContext';
 
 const Home: NextPage<HomeProps> = ({ nfts }) => {
+  const { user, setUser } = useUser();
+
   useEffect(() => {
     console.log('running app', process.env.NODE_ENV);
     const { location: { search }} = window;
@@ -22,11 +25,28 @@ const Home: NextPage<HomeProps> = ({ nfts }) => {
     if (code) {
       const initAuth = async () => {
         const token = await getAuthToken(code);
-        console.log({token});
+        if (token) {
+          console.log({token});
+          setUser(state => ({ ...state, token }));
+        }
       };
       initAuth();
     }
-  }, []);
+  }, [setUser]);
+
+  useEffect(() => {
+    /* when a token update happens, fetch user profile */
+    if (user.token) {
+      const fetchProfile = async () => {
+        const authBase = process.env.NODE_ENV === 'development' ? 'http://localhost:3001' : 'https://backstage-hacktoberfest-service.vercel.app';
+        const response = await (await fetch(`${authBase}/api/profile?access_token=${user.token}`)).json();
+        setUser(state => {
+          return { ...state, ...response.user};
+        });
+      };
+      fetchProfile();
+    }
+  }, [user.token, setUser]);
   
   return (
     <div>
