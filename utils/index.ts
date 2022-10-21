@@ -4,7 +4,6 @@ export const getCode = (query:string) => {
   
   /* '?code=6JGVCPvJjlwpEe1KD-H9LH782kixID9lI6EEnD9VXE2J9&state=authorization-code' */
   const match = query.match(regex);
-  console.log({match});
   
   /* if there is a match for state */
   if (match) {
@@ -15,7 +14,6 @@ export const getCode = (query:string) => {
       /* match: state= */
       regex = /\A?code=[^&]+&*/i;
       const codeMatch = query.match(regex);
-      console.log({codeMatch});
 
       /* if there is a match for code */
       if (codeMatch) {
