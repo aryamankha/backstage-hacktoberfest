@@ -8,6 +8,8 @@ import MetaMask from "./metamask";
 const Header = () => {
   const redirect = process.browser ? window.location.origin : "http://localhost:3000";
   const { isAuthenticated, user, loginWithRedirect, logout  } = useAuth0();
+  const url = `https://ahsanwtc.eu.auth0.com/login?state=authorization-code&client=LpfwDeMU9OectsdzuYBroOVQmyuAU6wr&protocol=oauth2&response_type=code&redirect_uri=${redirect}&scope=openid%20profile%20email&audience=mongo-db-auth`;
+
   return (
     <>
       {isAuthenticated && (
@@ -65,9 +67,9 @@ const Header = () => {
               <Link href="/browse"> Browse</Link>
             </div>
           </div>
-          <button onClick={loginWithRedirect} className="text-[1.1rem] mx-[1rem] bg-[#485ED1] px-5 py-2 rounded-lg hover:bg-[#364aaf]">
-                Sign In
-           </button>
+          <a href={url} className="text-[1.1rem] mx-[1rem] bg-[#485ED1] px-5 py-2 rounded-lg hover:bg-[#364aaf]">
+            Sign In
+           </a>
         </div>
       )}
     </>
