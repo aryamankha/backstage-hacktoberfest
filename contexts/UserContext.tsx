@@ -15,7 +15,7 @@ const initialState = {
   id: '', first_name: '', last_name: '', type: [''], username: '', nfts_owned: [''], token: '', picture: '', sub: ''
 };
 
-const UserContext = createContext<UserContextInterface | null>({} as UserContextInterface);
+const UserContext = createContext<UserContextInterface>({} as UserContextInterface);
 
 const UserProvider = ({ children }: GlobalLayoutProps) => {
   const [user, setUser] = useState(initialState);
