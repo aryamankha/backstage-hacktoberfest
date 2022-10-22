@@ -8,7 +8,7 @@ import { useUser } from '../contexts/UserContext';
 
 const Header = () => {
   const { user } = useUser();
-  const redirect = process.browser ? window.location.origin : "http://localhost:3000";
+  const redirect = process.env.NODE_ENV === 'development' ? "http://localhost:3000" : window.location.origin;
   const isAuthenticated = user.token ? true : false;
   const url = `https://ahsanwtc.eu.auth0.com/login?state=authorization-code&client=LpfwDeMU9OectsdzuYBroOVQmyuAU6wr&protocol=oauth2&response_type=code&redirect_uri=${redirect}&scope=openid%20profile%20email&audience=mongo-db-auth`;
 
