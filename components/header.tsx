@@ -2,12 +2,22 @@ import Head from "next/head";
 import Image from "next/image";
 import USerIcon from "../public/images/Profile.png";
 import Link from "next/link";
-import { useAuth0 } from "@auth0/auth0-react";
 import MetaMask from "./metamask";
+import Cookies from 'js-cookie';
+
+import { useUser } from '../contexts/UserContext';
 
 const Header = () => {
-  const redirect = process.browser ? window.location.origin : "http://localhost:3000";
-  const { isAuthenticated, user, loginWithRedirect, logout  } = useAuth0();
+  const { user, setUser } = useUser();
+  const redirect = process.env.NODE_ENV === 'development' ? "http://localhost:3000" : window.location.origin;
+  const isAuthenticated = user.token ? true : false;
+  const url = `https://ahsanwtc.eu.auth0.com/login?state=authorization-code&client=LpfwDeMU9OectsdzuYBroOVQmyuAU6wr&protocol=oauth2&response_type=code&redirect_uri=${redirect}&scope=openid%20profile%20email&audience=mongo-db-auth`;
+
+  const handleSignOutOnClick = () => {
+    setUser(state => ({ ...state, token: '' }));
+    Cookies.remove('auth_token');
+  };
+
   return (
     <>
       {isAuthenticated && (
@@ -28,7 +38,7 @@ const Header = () => {
             </div>
           </div>
           <div className="headerRight flex items-center justify-center">
-            <button onClick={() =>logout({returnTo: window.location.origin})} className="text-[1.1rem] mx-[1rem] bg-[#485ED1] px-5 py-2 rounded-lg hover:bg-[#364aaf]">
+            <button onClick={handleSignOutOnClick} className="text-[1.1rem] mx-[1rem] bg-[#485ED1] px-5 py-2 rounded-lg hover:bg-[#364aaf]">
                 Sign Out
            </button>
             <MetaMask />
@@ -65,9 +75,9 @@ const Header = () => {
               <Link href="/browse"> Browse</Link>
             </div>
           </div>
-          <button onClick={loginWithRedirect} className="text-[1.1rem] mx-[1rem] bg-[#485ED1] px-5 py-2 rounded-lg hover:bg-[#364aaf]">
-                Sign In
-           </button>
+          <a href={url} className="text-[1.1rem] mx-[1rem] bg-[#485ED1] px-5 py-2 rounded-lg hover:bg-[#364aaf]">
+            Sign In
+           </a>
         </div>
       )}
     </>
