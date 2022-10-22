@@ -32,6 +32,13 @@ const Home: NextPage<HomeProps> = ({ nfts }) => {
         }
       };
       initAuth();
+      return;
+    }
+
+    /* if there is a cookie present */
+    const auth_token = Cookies.get('auth_token');
+    if (auth_token) {
+      setUser(state => ({ ...state, token: auth_token }));
     }
   }, [setUser]);
 
