@@ -3,14 +3,20 @@ import Image from "next/image";
 import USerIcon from "../public/images/Profile.png";
 import Link from "next/link";
 import MetaMask from "./metamask";
+import Cookies from 'js-cookie';
 
 import { useUser } from '../contexts/UserContext';
 
 const Header = () => {
-  const { user } = useUser();
+  const { user, setUser } = useUser();
   const redirect = process.env.NODE_ENV === 'development' ? "http://localhost:3000" : window.location.origin;
   const isAuthenticated = user.token ? true : false;
   const url = `https://ahsanwtc.eu.auth0.com/login?state=authorization-code&client=LpfwDeMU9OectsdzuYBroOVQmyuAU6wr&protocol=oauth2&response_type=code&redirect_uri=${redirect}&scope=openid%20profile%20email&audience=mongo-db-auth`;
+
+  const handleSignOutOnClick = () => {
+    setUser(state => ({ ...state, token: '' }));
+    Cookies.remove('auth_token');
+  };
 
   return (
     <>
@@ -32,7 +38,7 @@ const Header = () => {
             </div>
           </div>
           <div className="headerRight flex items-center justify-center">
-            <button onClick={() => {}} className="text-[1.1rem] mx-[1rem] bg-[#485ED1] px-5 py-2 rounded-lg hover:bg-[#364aaf]">
+            <button onClick={handleSignOutOnClick} className="text-[1.1rem] mx-[1rem] bg-[#485ED1] px-5 py-2 rounded-lg hover:bg-[#364aaf]">
                 Sign Out
            </button>
             <MetaMask />
