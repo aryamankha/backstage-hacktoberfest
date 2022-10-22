@@ -4,6 +4,7 @@ import Cookies from 'js-cookie';
 import Header from "../components/header";
 import Footer from "../components/footer";
 import { useUser } from '../contexts/UserContext';
+import { User } from '../types';
 
 const Profile = () => {
   const { user, setUser } = useUser();
@@ -12,7 +13,7 @@ const Profile = () => {
     /* if there is a cookie present */
     const auth_token = Cookies.get('auth_token');
     if (auth_token) {
-      setUser(state => ({ ...state, token: auth_token }));
+      setUser((state: User) => ({ ...state, token: auth_token }));
     }
   }, [setUser]);
 
@@ -22,7 +23,7 @@ const Profile = () => {
       const fetchProfile = async () => {
         const authBase = process.env.NODE_ENV === 'development' ? 'http://localhost:3001' : 'https://backstage-hacktoberfest-service.vercel.app';
         const response = await (await fetch(`${authBase}/api/profile?access_token=${user.token}`)).json();
-        setUser(state => {
+        setUser((state: User) => {
           return { ...state, ...response.user};
         });
       };
@@ -30,7 +31,7 @@ const Profile = () => {
     }
   }, [user.token, setUser]);
 
-  const nftCount = user ? user.nfts_owned.reduce((accumulation, current) => {
+  const nftCount = user ? user.nfts_owned.reduce((accumulation: number, current: string) => {
     if (current !== '') {
       accumulation++;
     }
