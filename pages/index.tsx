@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import { useEffect } from 'react';
 import { GetServerSideProps } from 'next';
 import Head from "next/head";
+import Cookies from 'js-cookie';
 
 import Hero from "../components/hero";
 import Drops from "../components/drops";
@@ -17,7 +18,6 @@ const Home: NextPage<HomeProps> = ({ nfts }) => {
   const { user, setUser } = useUser();
 
   useEffect(() => {
-    console.log('running app', process.env.NODE_ENV);
     const { location: { search }} = window;
     const code = getCode(search);
 
@@ -28,6 +28,7 @@ const Home: NextPage<HomeProps> = ({ nfts }) => {
         if (token) {
           console.log({token});
           setUser(state => ({ ...state, token }));
+          Cookies.set('auth_token', token);
         }
       };
       initAuth();
