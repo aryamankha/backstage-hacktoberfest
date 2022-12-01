@@ -4,7 +4,7 @@ import Head from "next/head";
 import Hero from "../components/hero";
 import Drops from "../components/drops";
 import Faq from "../components/faq";
-import WhatIsItAbout from "../stories/whats-about";
+import WhatIsItAbout from "../components/whats-about";
 import Header from "../components/header";
 import Footer from "../components/footer";
 
