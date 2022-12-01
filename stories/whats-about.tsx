@@ -1,42 +1,25 @@
-import Image, { StaticImageData } from "next/image";
-import Win from "../public/images/win.jpg";
-import Create from "../public/images/create.jpg";
-import Buy from "../public/images/buy.jpg";
-
 type WhatIsItAboutType = {
   title: string;
-  img: StaticImageData;
   description: string;
+  primary?: boolean;
 };
 
 const aboutArr: Array<WhatIsItAboutType> = [
   {
-    description:
-      "Stars mint NFT collections that share their story with their fans and act as fundraising tools",
-    title: "Stars Create",
-    img: Create,
-  },
-  {
-    description:
-      "Fans buy NFTs that serve as access tokens to private star-led communities and unique benefits",
-    title: "Fans Buy",
-    img: Buy,
-  },
-  {
     title: "Everyone Wins",
     description:
       "When a star makes it big, fans' NFTs rise in value and everyone wins from the star's success",
-    img: Win,
   },
 ];
 
-function Card({ title, img, description }: WhatIsItAboutType) {
+export function Card({ title, description, primary }: WhatIsItAboutType) {
+  const color = primary ? "bg-purple-500" : "bg-white text-black bg-border";
+
   return (
     <div
-      className="p-4 flex justify-center flex-col "
+      className={`p-4 rounded border-2 flex ${color} font-black justify-center flex-col `}
       style={{ width: "323px", height: "450px" }}
     >
-      <Image src={img} alt={title} className="rounded-xl" />
       <h2 className="text-4xl font-light my-4">{title}</h2>
       <p className="font-light text-sm">{description}</p>
     </div>

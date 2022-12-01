@@ -1,14 +1,14 @@
 import type { NextPage } from "next";
-import { GetServerSideProps } from 'next';
+import { GetServerSideProps } from "next";
 import Head from "next/head";
 import Hero from "../components/hero";
 import Drops from "../components/drops";
 import Faq from "../components/faq";
-import WhatIsItAbout from "../components/whats-about";
+import WhatIsItAbout from "../stories/whats-about";
 import Header from "../components/header";
 import Footer from "../components/footer";
 
-import { GetNFTs, HomeProps } from '../types';
+import { GetNFTs, HomeProps } from "../types";
 
 const Home: NextPage<HomeProps> = ({ nfts }) => {
   return (
@@ -21,7 +21,7 @@ const Home: NextPage<HomeProps> = ({ nfts }) => {
       </div>
       <Hero />
       <WhatIsItAbout />
-      <Drops nfts={nfts}/>
+      <Drops nfts={nfts} />
       <Faq />
       <Footer />
     </div>
@@ -31,11 +31,13 @@ const Home: NextPage<HomeProps> = ({ nfts }) => {
 export default Home;
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const res = await fetch(`https://backstage-hacktoberfest-service.vercel.app/api/nfts?limit=6`);
-  const { nfts }: GetNFTs = await res.json();  
+  const res = await fetch(
+    `https://backstage-hacktoberfest-service.vercel.app/api/nfts?limit=6`
+  );
+  const { nfts }: GetNFTs = await res.json();
   return {
     props: {
-      nfts
-    }
+      nfts,
+    },
   };
-}
+};
