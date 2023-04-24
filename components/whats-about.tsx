@@ -2,6 +2,7 @@ import Image, { StaticImageData } from "next/image";
 import Win from "../public/images/win.jpg";
 import Create from "../public/images/create.jpg";
 import Buy from "../public/images/buy.jpg";
+import { FakeCard } from "../stories/fakecard";
 
 type WhatIsItAboutType = {
   title: string;
@@ -54,7 +55,7 @@ export default function WhatIsItAbout() {
       </h1>
       <div className="flex flex-col text-left md:text-center md:flex-row  space-y-4 md:space-y-0  mb-20">
         {aboutArr.map((item) => (
-          <Card {...item} key={item.title} />
+          <FakeCard {...item} key={item.title} />
         ))}
       </div>
       <p className="text-lg md:text-2xl font-normal">
