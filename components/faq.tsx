@@ -11,6 +11,7 @@ function FaqContainer({ title, text }: FaqContainerType) {
 
 export default function Faq() {
   return (
+    // responsive code for FAQ
     <div>
       <div className="bg-black py-8 md:py-14 px-4 md:px-12 lg:px-20 xl:px-44 text-white my-8">
         <h1
